@@ -1,0 +1,124 @@
+/* 
+-------------------- Top Navigation Bar 
+*/
+
+.topnav {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  list-style-type: none;
+  z-index: 2;
+  background-color: #0278ae;
+  font-family: "Open Sans";
+  font-size: 12px;
+  box-shadow: 1px 1px 5px #888888;
+}
+
+#topnavitem {
+  display: block;
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+#topnavitem:hover {
+  background-color: #194961;
+}
+
+.active {
+  background-color: #025A83;
+}
+
+/* 
+-------------------- Body 
+*/
+
+body {
+  background-color: #E8E8E8;
+  font-family: "Open Sans";
+}
+
+.container {
+  background-color: white;
+  margin: 3px 3px 3px 3px;
+  padding: 5px;
+  font-size: 12px;
+  box-shadow: 1px 1px 5px #888888;
+}
+
+/* 
+-------------------- Home 
+*/
+
+.home-row1 {
+  display: grid;
+  grid-template-columns: 20% 30% 20% 30%;
+  grid-template-rows: 150px;
+  margin-top: 5px;
+}
+
+.home-row2 {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 250px;
+}
+
+.home-row3 {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 250px;
+}
+
+/* 
+-------------------- Companies 
+*/
+
+.companies-row1 {
+  display: grid;
+  grid-template-columns: 20% 30% 20% 15% 15%;
+  grid-template-rows: 150px;
+  margin-top: 5px;
+}
+
+.companies-row2 {
+  display: grid;
+  grid-template-columns: 25% 25% 50%;
+  grid-template-rows: 300px;
+}
+
+.companies-row3 {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 250px;
+}
+
+
+/* 
+-------------------- Guards 
+*/
+
+.guards-row1 {
+  display: grid;
+  grid-template-columns: 20% 30% 20% 30%;
+  grid-template-rows: 150px;
+  margin-top: 5px;
+}
+
+.guards-row2 {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 250px;
+}
+
+.guards-row3 {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 250px;
+}
