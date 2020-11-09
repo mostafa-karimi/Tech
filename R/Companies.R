@@ -1,18 +1,49 @@
 rm(list = ls())
+###------------------------------------------------ Packages
+library(ggplot2)
+library(svglite)
 library(htmltools)
 ###
-###---------------- Summary of Sources 
+###------------------------------------------------ Data
 ###
-df <- data.frame(Names = paste(LETTERS[round(runif(20, 1, 20))], 
-                               LETTERS[round(runif(20, 1, 20))], 
-                               LETTERS[round(runif(20, 1, 20))], 
-                               LETTERS[round(runif(20, 1, 20))], 
-                               LETTERS[round(runif(20, 1, 20))], " Sdn Bhd", sep = ""),
-                 ID = paste(LETTERS[round(runif(20, 1, 20))], round(runif(20, 1000, 2000)), sep = ""),
-                 Grade = round(runif(20, 10, 90)),
-                 Rank = rep(c("Q1", "Q2", "Q3", "Q4"), each = 5),
-                 Guards = round(runif(20, 500, 1500)))
-df <- data.frame(No = 1:nrow(df), df)
+# companies.data <- load(DATA\companies-data.csv)
+###
+###------------------------------------------------ Row 1 Col 1
+###
+
+###
+###------------------------------------------------ Row 1 Col 2
+###
+
+###
+###------------------------------------------------ Row 1 Col 3
+###
+
+###
+###------------------------------------------------ Row 1 Col 4
+###
+
+###
+###------------------------------------------------ Row 2 Col 1
+###
+
+###
+###------------------------------------------------ Row 2 Col 2
+###
+
+###
+###------------------------------------------------ Row 2 Col 3
+###
+dfr2c3 <- data.frame(Names = paste(LETTERS[round(runif(20, 1, 20))], 
+                                   LETTERS[round(runif(20, 1, 20))], 
+                                   LETTERS[round(runif(20, 1, 20))], 
+                                   LETTERS[round(runif(20, 1, 20))], 
+                                   LETTERS[round(runif(20, 1, 20))], " Sdn Bhd", sep = ""),
+                     ID = paste(LETTERS[round(runif(20, 1, 20))], round(runif(20, 1000, 2000)), sep = ""),
+                     Grade = round(runif(20, 3, 8)),
+                     Rank = rep(c("Q1", "Q2", "Q3", "Q4"), each = 5),
+                     Guards = round(runif(20, 500, 1500)))
+dfr2c3 <- data.frame(No = 1:nrow(dfr2c3), dfr2c3)
 tb <- "<input type='text' id='cfilter' onkeyup='CFunction()' placeholder='Search Name or ID'>
 <table id='ctable'>
   <tr class='rowcellt' style='background: #0278ae; color: #ffffff;'>
@@ -23,14 +54,14 @@ tb <- "<input type='text' id='cfilter' onkeyup='CFunction()' placeholder='Search
     <th class='colhead4'>Rank<button class='sortable' onclick='sortTable5()'>&#8595;</button></th>
     <th class='colhead5'>Guards<button class='sortable' onclick='sortTable6()'>&#8595;</button></th>
   </tr>"
-for(i in 1:nrow(df)) {
+for (i in 1:nrow(dfr2c3)) {
   tb <- paste(tb, "<tr class='rowcell'>",
-   "<td class='colcell1'>", df[i, 1], "</td>
-    <td class='colcell2'><a href='index.html' target='iframe_a'>", df[i, 2], "</a></td>
-    <td class='colcell3'>", df[i, 3], "</td>
-    <td class='colcell4'>", df[i, 4], "</td>
-    <td class='colcell5'>", df[i, 5], "</td>
-    <td class='colcell6'>", df[i, 6], "</td>
+   "<td class='colcell1'>", dfr2c3[i, 1], "</td>
+    <td class='colcell2'><a href='../index.html' target='iframe_a'>", dfr2c3[i, 2], "</a></td>
+    <td class='colcell3'>", dfr2c3[i, 3], "</td>
+    <td class='colcell4'>", dfr2c3[i, 4], "</td>
+    <td class='colcell5'>", dfr2c3[i, 5], "</td>
+    <td class='colcell6'>", dfr2c3[i, 6], "</td>
   </tr>", sep = "")
 }
 tb <- paste(tb, "</table>", sep = "")
@@ -316,13 +347,6 @@ css <- "<style>
     text-decoration: none;
   }
 </style>"
-companytable <- HTML(paste(js, css, tb, sep = ""))
-html_print(companytable)
-###-----------------------------------------------
-# SummarySources <- function(df) {
-  # summarytable <- withTags(
-  #   table(HTML(
-      
-    # ))
-  save_html(companytable, file = "companytable.html")
-# }
+tabler2c3 <- HTML(paste(js, css, tb, sep = ""))
+save_html(tabler2c3, file = file.path(normalizePath(dirname("HTML/Tables/companies-r2c3.html")), 
+                                      basename("HTML/Tables/companies-r2c3.html")))

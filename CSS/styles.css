@@ -54,29 +54,6 @@ body {
 }
 
 /* 
--------------------- Home 
-*/
-
-.home-row1 {
-  display: grid;
-  grid-template-columns: 20% 30% 20% 30%;
-  grid-template-rows: 150px;
-  margin-top: 5px;
-}
-
-.home-row2 {
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 250px;
-}
-
-.home-row3 {
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 250px;
-}
-
-/* 
 -------------------- Companies 
 */
 
